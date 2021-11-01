@@ -88,6 +88,7 @@ const SignUp = styled.div`
       width: 20px;
       z-index: auto;
     }
+    
     span {
       color: rgb(249, 249, 249);
       font-size: 13px;
