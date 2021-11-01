@@ -1,20 +1,24 @@
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom"
-import Login from "./components/Login"
-import "./App.css"
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+import Login from "./components/Login";
+import Header from "./components/Header";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
       <Router>
+        <Header />
         <Switch>
-          <Route exact path='/'>
+          <Route exact path="/">
             <Login />
           </Route>
         </Switch>
-      </Router>      
+      </Router>
     </div>
   );
 }
 
 export default App;
-{/* <h2>Hello We will build a Youtube DisneyPlus today🚀!</h2> */}
+{
+  /* <h2>Hello We will build a Youtube DisneyPlus today🚀!</h2> */
+}
