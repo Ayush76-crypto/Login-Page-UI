@@ -97,6 +97,7 @@ const SignUp = styled.div`
       padding: 2px 0px;
       white-space: nowrap;
       position: relative;
+      
       &:before {
         background-color: rgb(249, 249, 249);
         border-radius: 0px 0px 4px 4px;
