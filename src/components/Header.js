@@ -1,7 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import { auth, provider } from "../firebase";
 
-function Header() {
+function Header(props) {
+  const handleAuth = () => {
+    auth
+      .signInWithPopup(provider)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   return (
     <Nav>
       <Disney>
@@ -33,7 +45,7 @@ function Header() {
           <span>SERIES</span>
         </a>
       </SignUp>
-      <Login>Login</Login>
+      <Login onClick={handleAuth}>Login</Login>
     </Nav>
   );
 }
@@ -88,7 +100,7 @@ const SignUp = styled.div`
       width: 20px;
       z-index: auto;
     }
-    
+
     span {
       color: rgb(249, 249, 249);
       font-size: 13px;
@@ -97,7 +109,7 @@ const SignUp = styled.div`
       padding: 2px 0px;
       white-space: nowrap;
       position: relative;
-      
+
       &:before {
         background-color: rgb(249, 249, 249);
         border-radius: 0px 0px 4px 4px;
